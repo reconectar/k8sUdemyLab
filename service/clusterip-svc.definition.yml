@@ -1,13 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp-nodeport-service
+  name: myapp-clusterip-svc
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: myapp
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 30080
-
